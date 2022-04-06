@@ -25,3 +25,16 @@ document.getElementById("keypad").addEventListener("click", function (event) {
     input.value = newNumber;
   }
 });
+function checkValue() {
+  const displayPin = document.getElementById("display-pin").value;
+  const typedNumber = document.getElementById("typed-number").value;
+  const matchPin = document.getElementById("match");
+  const notMatchPin = document.getElementById("not-match");
+  if (displayPin == typedNumber) {
+    matchPin.style.display = "block";
+    notMatchPin.style.display = "none";
+  } else {
+    notMatchPin.style.display = "none";
+    matchPin.style.display = "block";
+  }
+}
